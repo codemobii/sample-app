@@ -1,7 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { getRandomCode } from "./util/helper";
+import { useState, useEffect } from "react";
+import ContactForm from "./components/ContactForm";
 
 function App() {
+  const [name, setName] = useState();
+  const [age, setAge] = useState("");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setName("John");
+    }, 5000);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +21,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <ContactForm name={name} age={age} guy="Name" />
       </header>
     </div>
   );
