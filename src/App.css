@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -13,35 +19,73 @@
   }
 }
 
-.App-header {
+.App {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app-containter {
+  width: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  padding: 10px 10px;
+  border-radius: 12px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.header {
-  background-color: #282c34;
-  min-height: 100vh;
+.submit-button {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: aquamarine;
+  width: 100%;
+}
+
+.todo-list {
+  list-style: none;
+  width: 100%;
+  margin-top: 20px;
+  /* border-top: 1px solid #eee; */
+}
+
+.todo-item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  height: 40px;
+  padding: 0 10px;
+  background-color: beige;
+  border-radius: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.todo-item p {
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+}
+
+.list-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-buttons button {
+  padding: 5px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: aquamarine;
+  margin-left: 10px;
 }
